@@ -1,0 +1,164 @@
+/* Snippets para evitar conflictos en box model */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1REM=10px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    /* font-family:  */
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+
+/* Globales */
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    max-width: 120rem;
+    margin-inline: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Header y Navegacion */
+
+.title-site {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.text-color-blue {
+    color: #037bc0;
+}
+
+.nav-primary {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-container {
+    border-color: #e1e1e1;
+    border-top-style: solid;
+    border-width: 0.1rem;
+}
+
+.hero {
+    height: 55rem;
+    background-image: url(../assets/img/principal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+/* Categorias */
+
+.category {
+    padding-top: 5rem;
+}
+
+.category h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.category a {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.category a:hover {
+    background-color: #037bc0;
+    color: #fff;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.container-category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+/* Sobre Nosotros*/
+
+.about-us {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../assets/img/nosotros.jpg);
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem;
+    background-position: left center;
+}
+
+
+/* /* Dejar Sobre nosotros del lado derecho
+Con grid box */
+
+
+/* .about-us-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8rem;
+}
+
+.about-us-text {
+    grid-column: 2/3;
+} */
+
+
+/* Con flex box */
+
+.about-us-flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-us-text {
+    flex-basis: 50%;
+    padding-left: 4rem;
+    color: #FFF;
+}
+
+
+/* Contenido principal de la página - Nuestros Productos */
